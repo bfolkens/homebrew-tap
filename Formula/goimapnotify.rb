@@ -6,6 +6,13 @@ class Goimapnotify < Formula
   license "GPL-3.0-only"
   head "https://gitlab.com/shackra/goimapnotify.git", branch: "master"
 
+  bottle do
+    root_url "https://github.com/bfolkens/homebrew-tap/releases/download/goimapnotify-2.3.7"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, big_sur:      "1d60524f3e9fec2567749983d4b06e4a24a67c7521a73c5df86bde7beb0bc35e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "004d05708f187c81fcd760fb34630de40485ceb5d77ee03b0d0b7c615662e7f0"
+  end
+
   depends_on "go" => :build
 
   def install
